@@ -1,8 +1,8 @@
 [
   {
     "id": 0,
-    "firstName": "Paul",
-    "lastName": "Example",
-    "age": 50
+    "username": "Paul",
+    "age": 50,
+    "hobbies": ["nodejs", "math"]
   }
 ]

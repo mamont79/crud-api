@@ -1,9 +1,8 @@
 interface User {
   id: number;
-  firstName: string;
-  lastName?: string | null;
-  age?: number | null;
-
+  username: string;
+  age: number;
+  hobbies: Array<string> | Array<null>;
 }
 
-export { User }
+export { User };
