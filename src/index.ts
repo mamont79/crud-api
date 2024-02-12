@@ -10,7 +10,7 @@ require('dotenv').config({ path: './.env' });
 const URL_REG_EXP =
   /\/api\/users\/[0-9a-zA-Z!"#$%&'()*+,-./\\:;<=>?@[\]^_`{|}~]+$/;
 
-const PORT = Number(process.env.PORT);
+const PORT = Number(process.env.PORT) || 4000;
 
 const mamontServer = http.createServer((request, response) => {
   if (
