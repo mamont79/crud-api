@@ -2,8 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { ServerResponse, IncomingMessage } from 'http';
 
-// import { User } from "./userInterface";
-
 const getUser = (request: IncomingMessage, response: ServerResponse) => {
   return fs.readFile(
     path.join(__dirname, '..', 'database.json'),
