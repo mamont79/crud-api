@@ -50,5 +50,7 @@ const mamontServer = http.createServer((request, response) => {
 });
 
 mamontServer.listen(PORT, () => {
-  console.log('Server is running on port 4000. Use http://localhost:4000');
+  console.log(
+    `Server is running on port ${PORT}. Use http://localhost:${PORT}`
+  );
 });
