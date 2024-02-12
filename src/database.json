@@ -1,8 +1,1 @@
-[
-  {
-    "id": 0,
-    "username": "Paul",
-    "age": 50,
-    "hobbies": ["nodejs", "math"]
-  }
-]
+[{"username":"John","age":15,"hobbies":["nodejs"],"id":1},{"id":2,"username":"Tom","age":10,"hobbies":["math","bath"]}]

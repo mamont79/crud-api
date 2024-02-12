@@ -14,7 +14,7 @@ const getUser = (request: IncomingMessage, response: ServerResponse) => {
         response.end(
           JSON.stringify({
             success: false,
-            error: err,
+            error: 'Something wrong on server',
           })
         );
       } else {
