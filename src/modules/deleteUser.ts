@@ -41,7 +41,7 @@ const deleteUser = (request: IncomingMessage, responce: ServerResponse) => {
                   })
                 );
               } else {
-                responce.writeHead(200, { 'Content-Type': 'application/json' });
+                responce.writeHead(204, { 'Content-Type': 'application/json' });
                 responce.end(
                   JSON.stringify({
                     success: true,

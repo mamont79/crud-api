@@ -48,7 +48,7 @@ const addUser = (request: IncomingMessage, response: ServerResponse) => {
                   })
                 );
               } else {
-                response.writeHead(200, { 'Content-Type': 'application/json' });
+                response.writeHead(201, { 'Content-Type': 'application/json' });
                 response.end(
                   JSON.stringify({
                     success: true,

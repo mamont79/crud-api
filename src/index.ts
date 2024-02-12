@@ -3,6 +3,7 @@ import { getUser } from './modules/getUsers';
 import { addUser } from './modules/addUser';
 import { updateUser } from './modules/updateUser';
 import { deleteUser } from './modules/deleteUser';
+import { clientsError } from './modules/clientsError';
 
 const PORT = 4000;
 
@@ -14,7 +15,9 @@ const mamontServer = http.createServer((request, response) => {
   } else if (request.method == 'PUT' && request.url == '/api/users') {
     return updateUser(request, response);
   } else if (request.method == 'DELETE' && request.url == '/api/users') {
-    return updateUser(request, response);
+    return deleteUser(request, response);
+  } else {
+    return clientsError(request, response);
   }
 });
 
