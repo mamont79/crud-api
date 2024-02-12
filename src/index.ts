@@ -5,11 +5,12 @@ import { updateUser } from './modules/updateUser';
 import { deleteUser } from './modules/deleteUser';
 import { clientsError } from './modules/clientsError';
 import { getUserById } from './modules/getUserById';
+require('dotenv').config({ path: './.env' });
 
 const URL_REG_EXP =
   /\/api\/users\/[0-9a-zA-Z!"#$%&'()*+,-./\\:;<=>?@[\]^_`{|}~]+$/;
 
-const PORT = 4000;
+const PORT = Number(process.env.PORT);
 
 const mamontServer = http.createServer((request, response) => {
   if (
@@ -48,6 +49,6 @@ const mamontServer = http.createServer((request, response) => {
   }
 });
 
-mamontServer.listen(4000, () => {
+mamontServer.listen(PORT, () => {
   console.log('Server is running on port 4000. Use http://localhost:4000');
 });
