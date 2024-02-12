@@ -1,17 +1,16 @@
-import fs from "fs";
-import path from "path";
+import fs from 'fs';
+import path from 'path';
+import { ServerResponse, IncomingMessage } from 'http';
 
-import { ServerResponse, IncomingMessage } from "http";
-
-import { User } from "./userInterface";
+// import { User } from "./userInterface";
 
 const getUser = (request: IncomingMessage, response: ServerResponse) => {
   return fs.readFile(
-    path.join(__dirname, "..", "database.json"),
-    "utf8",
+    path.join(__dirname, '..', 'database.json'),
+    'utf8',
     (err, data) => {
       if (err) {
-        response.writeHead(500, { "Content-Type": "application/json" });
+        response.writeHead(500, { 'Content-Type': 'application/json' });
         response.end(
           JSON.stringify({
             success: false,
@@ -19,16 +18,16 @@ const getUser = (request: IncomingMessage, response: ServerResponse) => {
           })
         );
       } else {
-        response.writeHead(200, { "Content-Type": "application/json" });
-         response.end(
-           JSON.stringify({
-             success: true,
-             message: JSON.parse(data),
-           })
-         );
+        response.writeHead(200, { 'Content-Type': 'application/json' });
+        response.end(
+          JSON.stringify({
+            success: true,
+            message: JSON.parse(data),
+          })
+        );
       }
     }
-  )
-}
+  );
+};
 
-export {getUser}
+export { getUser };
